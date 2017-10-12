@@ -13,7 +13,6 @@ class App extends React.Component {
     };
   }
 
-  // TODO: componentWillMount()
   // TODO: componentDidMount()
   // TODO: componentWillUnmount()
 
@@ -28,6 +27,10 @@ class App extends React.Component {
     this.setState({
       latestTweets: newTweets
     });
+  }
+
+  componentWillMount() {
+    this.fetchTweets();
   }
 
   render() {
