@@ -14,7 +14,9 @@ class TweetWall extends React.Component {
     this.state.tweets = this.props.newTweets;
   }
 
-  // TODO: shouldComponentUpdate()
+  shouldComponentUpdate(nextProps) {
+    return ( nextProps.tweets > 0);
+  }
   
   componentWillReceiveProps(nextProps) {
     const currentTweets = this.state.tweets;
